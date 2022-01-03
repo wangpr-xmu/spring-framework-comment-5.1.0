@@ -97,6 +97,7 @@ public class ContextLoaderListener extends ContextLoader implements ServletConte
 
 	/**
 	 * Initialize the root web application context.
+	 * 初始化根上线文(root web application context)
 	 */
 	@Override
 	public void contextInitialized(ServletContextEvent event) {

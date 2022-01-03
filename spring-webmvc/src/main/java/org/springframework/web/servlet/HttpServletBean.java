@@ -75,7 +75,7 @@ import org.springframework.web.context.support.StandardServletEnvironment;
  * @author Juergen Hoeller
  * @see #addRequiredProperty
  * @see #initServletBean
- * @see #doGet
+ * @see #doGe
  * @see #doPost
  */
 @SuppressWarnings("serial")
@@ -150,6 +150,7 @@ public abstract class HttpServletBean extends HttpServlet implements Environment
 	public final void init() throws ServletException {
 
 		// Set bean properties from init parameters.
+		// 获取web.xml配置的init-param
 		PropertyValues pvs = new ServletConfigPropertyValues(getServletConfig(), this.requiredProperties);
 		if (!pvs.isEmpty()) {
 			try {
